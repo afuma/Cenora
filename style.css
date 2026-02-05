@@ -232,8 +232,29 @@ a:hover {
 .hero-subtitle {
   font-size: 1.05rem;
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--text-light);
+}
+
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.hero-benefits li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  color: var(--text-dark);
+  position: relative;
+}
+
+.hero-benefits li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 .hero-cta {
@@ -252,7 +273,7 @@ a:hover {
 
 .hero-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
   border-radius: 2px;
   box-shadow: var(--shadow-md);
 }
@@ -309,21 +330,69 @@ a:hover {
    ============================================ */
 
 .solution-section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background-color: var(--bg-light);
+}
+
+.solution-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.solution-feature {
+  text-align: center;
+  max-width: 200px;
+  padding: 1rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.solution-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.solution-feature .feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.solution-feature p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.solution-objective {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.solution-objective-text {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
 }
 
 .section-subtitle {
   text-align: center;
   font-size: 1.1rem;
   color: var(--text-light);
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 3rem;
+  line-height: 1.6;
+  padding: 0 20px;
 }
 
 .solution-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.5rem;
   margin-top: 3rem;
 }
@@ -333,7 +402,7 @@ a:hover {
   padding: 2.5rem;
   border: 1px solid var(--border-color);
   border-radius: 2px;
-  text-align: center;
+  text-align: left;
 }
 
 .solution-number {
@@ -360,8 +429,12 @@ a:hover {
    ============================================ */
 
 .services-section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background-color: var(--bg-white);
+}
+
+.services-section h2 {
+  margin-bottom: 2.5rem;
 }
 
 .services-grid {
@@ -454,8 +527,33 @@ a:hover {
    ============================================ */
 
 .pricing-section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background-color: var(--bg-white);
+}
+
+.roi-section {
+  background-color: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: 4px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.roi-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.roi-list li {
+  background-color: var(--bg-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
 }
 
 .pricing-grid {
