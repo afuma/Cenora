@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans leading-relaxed text-text-dark bg-bg-white overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight mb-4 text-text-dark;
+  }
+
+  h1 {
+    @apply text-5xl mb-6 font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-4xl mb-6 text-center font-bold;
+  }
+
+  h3 {
+    @apply text-xl mb-4 font-semibold;
+  }
+
+  p {
+    @apply mb-4 text-text-dark leading-relaxed;
+  }
+
+  a {
+    @apply text-text-dark no-underline transition-all duration-300;
+  }
+
+  a:hover {
+    @apply text-accent;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block py-3 px-8 rounded font-semibold text-sm text-center cursor-pointer transition-all duration-300 border-2 whitespace-nowrap tracking-wide;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border-primary;
+  }
+
+  .btn-primary:hover {
+    @apply bg-accent border-accent text-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-primary border-primary;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-primary text-white;
+  }
+
+  .btn-large {
+    @apply py-4 px-12 text-base;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-5;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
