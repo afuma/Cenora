@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/cenora.fr/', // <--- IMPORTANT pour GitHub Pages
+  base: '/',
   logLevel: 'error', // Supprimer les warnings
   plugins: [
     base44({
