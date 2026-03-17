@@ -105,8 +105,18 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/30 text-xs">© 2026 Cenora. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <span className="text-white/30 text-xs hover:text-white/50 cursor-pointer transition-colors">Mentions légales</span>
-            <span className="text-white/30 text-xs hover:text-white/50 cursor-pointer transition-colors">Politique de confidentialité</span>
+            <Link
+              to={createPageUrl("Legal")}
+              className="text-white/30 text-xs hover:text-white/50 cursor-pointer transition-colors"
+            >
+              Mentions légales
+            </Link>
+            <Link
+              to={createPageUrl("Confidentialities")}
+              className="text-white/30 text-xs hover:text-white/50 cursor-pointer transition-colors"
+            >
+              Politique de confidentialité
+            </Link>
           </div>
         </div>
       </div>

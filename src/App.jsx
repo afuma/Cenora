@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import Legal from './pages/Legal';
+import Confidentialities from './pages/Confidentialities';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -41,11 +43,14 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
+      {/* Page principale */}
       <Route path="/" element={
         <LayoutWrapper currentPageName={mainPageKey}>
           <MainPage />
         </LayoutWrapper>
       } />
+
+      {/* Toutes les pages définies dans pagesConfig */}
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}
@@ -57,6 +62,26 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
+
+      {/* Pages légales */}
+      <Route
+        path="/Legal"
+        element={
+          <LayoutWrapper currentPageName="Legal">
+            <Legal />
+          </LayoutWrapper>
+        }
+      />
+      <Route
+        path="/Confidentialities"
+        element={
+          <LayoutWrapper currentPageName="Confidentialities">
+            <Confidentialities />
+          </LayoutWrapper>
+        }
+      />
+
+      {/* Page 404 */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
